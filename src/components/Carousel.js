@@ -1,11 +1,8 @@
-import React from 'react';
-import { Fade } from 'react-slideshow-image';
+import React, {Component} from 'react';
 import about_pic from '../assets/about_pic.JPG'
 import squaw from '../assets/squaw.JPG'
-import grad from '../assets/grad.JPG'
+import grad from '../assets/grad.jpg'
 import nyc from '../assets/nyc.JPG'
-
-import Slider from 'react-slick';
 
 
 const fadeImages = [
@@ -13,27 +10,64 @@ const fadeImages = [
   squaw, 
   grad, 
   nyc
-];
- 
-const fadeProperties = {
-    duration: 5000,
-    transitionDuration: 500,
-    infinite: true,
-    indicators: true,
-    onChange: (oldIndex, newIndex) => {
-      console.log(`fade transition from ${oldIndex} to ${newIndex}`);
+]; 
+
+class Carousel extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            arr: ['fadeIn', 'invisible', 'invisible', 'invisible'],
+            index: 0,
+            next: 1
+        }
     }
+
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.changePicture(), 
+            4000
+        )
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID)
+    }
+
+    changePicture() {
+        const changeIndexes = () => {
+            var newArr = this.state.arr;
+            newArr[this.state.index] = 'fadeOut'
+            newArr[this.state.next] = 'fadeIn'
+            this.setState({arr: newArr})
+
+
+            const makeInvisible = () => {
+                console.log(this.state.index)
+                var newArr = this.state.arr;
+                newArr[this.state.index] = 'invisible'
+                this.setState({arr: newArr})
+                this.state.index = this.state.next;
+                this.state.next = (this.state.next + 1 >= this.state.arr.length) ? 0 : this.state.next + 1
+            }
+
+            setTimeout(makeInvisible, 1500)
+        }
+        changeIndexes()
   }
-   
-  const Carousel = () => {
-    return (
-        <div className='carousel-container'>
-            <img src={fadeImages[0]} />
-            <img src={fadeImages[1]} />
-            <img src={fadeImages[2]} />
-            <img src={fadeImages[3]} />
-        </div>
-    )
-  }
+  
+    render() {
+        return (
+            <div className='about-pic-col'>
+                <img className='about-picture' id={this.state.arr[0]} src={fadeImages[0]} />
+                <img className='about-picture' id={this.state.arr[1]} src={fadeImages[1]} />
+                <img className='about-picture' id={this.state.arr[2]} src={fadeImages[2]} />
+                <img className='about-picture' id={this.state.arr[3]} src={fadeImages[3]} />
+            </div>
+        )
+
+    }
+}
+
+
 
 export default Carousel;

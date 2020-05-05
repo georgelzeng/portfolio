@@ -10,10 +10,10 @@ import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ResumePage from './pages/ResumePage'
 import HobbiesPage from './pages/HobbiesPage'
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import ColoredLine from './components/Line';
 import EnterButton from './components/EnterButton'
-import { Link, animateScroll as scroll } from "react-scroll";
+// import { Link, animateScroll as scroll } from "react-scroll";
 
 
 

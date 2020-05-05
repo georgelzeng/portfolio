@@ -47,31 +47,94 @@
   background-color: var(--aboutBackgroundColor);
 
 }
+
 .about-row {
   display: flex;
   flex-direction: row;
-  margin: auto;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.about-text-col {
+  flex-direction: column;
+  margin: auto 0;
+  flex-basis: 40%;
 
 }
 
-@media (max-width:800px) {
+.about-pic-col {
+  flex-direction: column;
+  margin: 50px 0;
+  flex-basis: 40%;
+  max-height: 100vh;
+  max-width: 20%;
+  position: relative
+}
+
+.about-picture {
+  max-width:100%;
+  margin: auto;
+  position: absolute;
+  vertical-align: middle;
+  top:0;
+  left:0;
+  bottom: 0
+
+}
+
+@media (max-width:600px) {
   .about-row {
-    overflow: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap
   }
+
+  .about-pic-col {
+    min-width: 100vw
+  }
+}
+#invisible {
+  opacity: 0
 }
 
-.about-row-col {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0;
-  flex-basis: 40%;
-  padding: 20px;
-  
+#fadeIn
+{
+    animation: fadeIn ease-out;
+    animation-duration: 1.5s;
 }
+
+@keyframes fadeIn {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  100% {
+      display: block;
+      opacity: 1;
+  }
+}i
+
+#fadeOut
+{
+  animation: fadeOut ease;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: block;
+    opacity: 0
+  }
+
+}
+
+
+
 
 #Hive {
   color: #73a4f4;
@@ -84,25 +147,6 @@
 
 #Phoenix {
   color:maroon
-}
-
-#about-pic-col {
-  display: flex;
-  margin: 50px 0px;
-}
-
-.about-picture {
-  width: 90%;
-  margin: auto;
-}
-
-.slideshow-container {
-  width: 50%;
-  margin: auto;
-}
-
-.image-container {
-  width: 100%;
 }
 
 
