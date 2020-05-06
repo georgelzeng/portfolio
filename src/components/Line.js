@@ -7,7 +7,8 @@ function ColoredLine (props) {
             color: props.color,
             backgroundColor: props.color,
             height: props.height,
-            width: props.width
+            width: props.width, 
+            margin: 0
         }}
     />
     )

@@ -38,8 +38,136 @@
   color:gray
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.nav {
+  background-color: white;
+  color: black;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-logo {
+  position: absolute;
+  left: 40px;
+  align-items: center;
+}
+
+.nav-logo:hover {
+  cursor: pointer;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  height: 100%;
+  width: 100%
+}
+
+.nav-text-container{
+  display: flex;
+  margin-right: 40px
+}
+
+.nav-item {
+  min-width: 100px;
+  color:black;
+}
+
+.nav-item:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+
+
+.btn-one {
+  color: red;
+  transition: all 0.3s;
+  position: relative;
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
-  --aboutBackgroundColor: black;
+  --aboutBackgroundColor: #282c34;
   }
 
 .about-page {
@@ -51,34 +179,39 @@
 .about-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   min-height: 100vh;
+  margin: 0
 }
 
 .about-text-col {
   flex-direction: column;
-  margin: auto 0;
+  margin: auto;
+  margin-right: 20px;
   flex-basis: 40%;
 
 }
 
 .about-pic-col {
-  flex-direction: column;
-  margin: 50px 0;
+  margin: 0;
   flex-basis: 40%;
   max-height: 100vh;
-  max-width: 20%;
-  position: relative
+  
+}
+
+.carousel-container{
+  position:relative;
+  height: 100%
 }
 
 .about-picture {
   max-width:100%;
+  max-height: 60vh;
   margin: auto;
   position: absolute;
-  vertical-align: middle;
-  top:0;
-  left:0;
-  bottom: 0
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 
@@ -90,7 +223,7 @@
   }
 
   .about-pic-col {
-    min-width: 100vw
+    min-height: 80vw
   }
 }
 #invisible {
@@ -113,7 +246,7 @@
       display: block;
       opacity: 1;
   }
-}i
+}
 
 #fadeOut
 {
