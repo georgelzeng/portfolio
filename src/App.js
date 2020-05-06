@@ -8,15 +8,15 @@ import './App.css';
 import {Link} from 'react-scroll'
 import {Container} from 'react-bootstrap'
 
-
+import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ResumePage from './pages/ResumePage'
 import HobbiesPage from './pages/HobbiesPage'
 // import Footer from './components/Footer';
-import ColoredLine from './components/Line';
-import EnterButton from './components/EnterButton'
 import Navbar from './components/Navbar'
+import SectionTwo from './components/SectionTwo'
+import SectionThree from './components/SectionThree'
 
 
 
@@ -41,27 +41,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navbar/>
-        <body className="App-body">
-
-
-          <p style={{"font-size":75}}>Hey!</p>
-          <p style={{"font-size":50}}>I'm George.</p>
-          <p align="center"> I'm a software engineer and a product manager passionate about building cool things. </p>
-          <ColoredLine color={'white'} height={1} width={200} style={{'margin':100}}/>
-
-          <EnterButton />
-        </body>
-        <Container className='white-section' fluid>
-          <AboutPage />
-        </Container> 
-
-
-        <ColoredLine color={'white'} height={1} width={300}/>
-        <ResumePage />
-        <ColoredLine color={'white'} height={1} width={300}/>
-        <ProjectsPage />
-        <ColoredLine color={'white'} height={1} width={300}/>
-        <HobbiesPage />
+        <HomePage />
+        <SectionTwo />
+        <SectionThree />
 
       </div>
     );
