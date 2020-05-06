@@ -8,7 +8,7 @@ class Navbar extends Component {
         <nav className='nav'>
             <div className='nav-content'>
                 <div className='nav-logo'>
-                    <Link
+                    <Link className='nav-item'
                         activeClass='active'
                         to='App'
                         spy={true}
@@ -16,14 +16,11 @@ class Navbar extends Component {
                         isDynamic={true}
                         offset={0}
                         duration={500}>
-                            GEORGE ZENG
+                        <span>GEORGE ZENG</span>
                     </Link> 
                 </div>
-                <div className='nav-text-container'>
-                    <div className='btn btn-one'>
-                        <span> Hello</span>
-                    </div>
 
+                <div className='nav-text-container'>
                     <Link className='nav-item'
                     activeClass='active'
                     to='about-page'
@@ -32,7 +29,7 @@ class Navbar extends Component {
                     isDynamic={true}
                     offset={0}
                     duration={500}>
-                        ABOUT
+                        <span>ABOUT</span>
                     </Link> 
                     <Link className='nav-item'
                     activeClass='active'
@@ -42,7 +39,7 @@ class Navbar extends Component {
                     isDynamic={true}
                     offset={0}
                     duration={500}>
-                        RESUME
+                        <span>RESUME</span>
                     </Link> 
                     <Link className='nav-item'
                     activeClass='active'
@@ -53,7 +50,7 @@ class Navbar extends Component {
                     offset={0}
                     duration={500}
                     style={{'margin':0}}>
-                        PROJECTS
+                        <span>PROJECTS</span> 
                     </Link>                    
 
                 </div>
