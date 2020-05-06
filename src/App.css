@@ -9,17 +9,20 @@
 
 
 :root {
-  --homeBackgroundColor: cornflowerblue;
+  --sectionOneBackgroundColor: cornflowerblue;
   --aboutTextColor: black;
   --aboutBackgroundColor: blanchedalmond;
   --sectionTwoBackgroundColor: white;
+  --resumeBackgroundColor: var(--sectionOneBackgroundColor);
+  --sectionThreeBackgroundColor: var(--aboutBackgroundColor)
+
   }
 
   /* NAV BAR */
 
 .nav {
-  background-color:var(--homeBackgroundColor);
-  color: black;
+  background-color:var(--sectionOneBackgroundColor);
+  color: white;
   position: sticky;
   top: 0px;
   width: 100%;
@@ -104,26 +107,35 @@
   transform: scale(0.1, 1);
 }
 
+/* TITLECARD */
+
+.titlecard{
+  font-size: 30px;
+  position: absolute;
+  top: -50px;
+  font-weight: bold;
+}
+
 /* HOME PAGE */
 
 .App-body {
-  background-color: var(--homeBackgroundColor);
-  min-height: 100vh;
+  background-color: var(--sectionOneBackgroundColor);
+  min-height: 130vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: 1.2em;
   color: white;
   font-family: 'Avenir', 'Helvetica';
 
 }
 
-.App-link {
-  color: #61dafb;
+.hey {
+  margin-top: 100px
 }
 
 #enterbutton{
+  margin: 15px;
   cursor: pointer;
 }
 
@@ -131,15 +143,22 @@
   color:darkslategray
 }
 
-/* WHITE SECTION */
-.white-section{
-  min-height: 100vh;
+/* SECTIONS */
+#two.section {
+  color:black;
   background-color: var(--sectionTwoBackgroundColor);
-  position:relative;
+  min-height: 150vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  position: relative;
 }
 
+#three.section{
+  background-color: var(--sectionThreeBackgroundColor);
+  min-height: 200vh
+}
 
 /* ABOUT PAGE */
 
@@ -150,13 +169,16 @@
   top: -100px;
   max-width: 80vw;
   min-height: 70vh;
+  display: flex;
 }
 
 .about-row {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  min-width: 100%;
 }
 
 .about-text-col {
@@ -164,11 +186,10 @@
   margin: auto;
   margin-right: 20px;
   flex-basis: 40%;
-
 }
 
 .about-pic-col {
-  margin: 0;
+  margin: auto;
   flex-basis: 40%;
   max-height: 100vh;
   
@@ -240,37 +261,159 @@
   }
 
 }
+.about-text-row {
+  display:flex;
+}
+.bullet-col{
+  width: 10px;
+  text-align: left;
+  margin: 0;
+}
 
+.bullet{
+  font-weight: bold;
+  font-size: x-large;
+  width: 10px
+}
+
+.bullet-text{
+  font-weight: bold;
+  font-size: x-large
+}
+
+.bullet-text-col{
+  flex:5
+}
+
+.icon-row{
+  display:flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 40px;
+  margin: 20px
+}
 
 #Hive {
   color: #73a4f4;
   background-color: var(--aboutBackgroundColor);
 }
 #Axon {
-  color: yellow;
+  color: sandybrown;
   background-color: var(--aboutBackgroundColor);
 }
 
 #Phoenix {
-  color:maroon
+  color:maroon;
+  background-color: var(--aboutBackgroundColor);
 }
-
 
 /* RESUME PAGE */
 
-.resume-page {
-  color:white;
-  background-color: darkkhaki;
-  height: 100vh;
+
+.resume-title-card{
+  position: absolute;
+  top: -200px
+}
+
+.resume-page{
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--sectionTwoBackgroundColor);
+  position:absolute;
+  bottom: -500px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
+.education-row {
+  display: flex;
+  align-items: center
+}
+.education-card-img {
+  max-width: 250px
+}
+
+.education-col {
+  text-align: left;
+  margin-left: 30px
+}
+
+.education-name {
+  font-size: 30px
+}
+.education-bullet{
+
+}
+
+.education-year {
+  text-align: left;
+}
+
+.education-gpa {
+  text-align: left;
+}
+
+.education-classes {
+  text-align: left;
+}
+
+
+.resume-row{
+display: flex;
+background-color: var(--sectionTwoBackgroundColor);
+justify-content: space-evenly;
+
+}
+
+.resume-card-img{
+  object-fit: cover;
+  width:200px;
+  height:250px; 
+}
+.resume-button-row{
+  justify-content: center;
+  padding: 0 0 30px 0
+}
+
+
+a.button2{
+  display:inline-block;
+  padding:0.5em 3em;
+  border:0.16em solid dimgray;
+  margin:0 30px 0.3em 30px;
+  box-sizing: border-box;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:'Roboto',sans-serif;
+  font-weight:400;
+  color: dimgray;
+  text-align:center;
+  transition: all 0.15s;
+}
+a.button2:hover{
+  color:var(--sectionOneBackgroundColor);
+  border-color:var(--sectionOneBackgroundColor);
+}
+a.button2:active{
+  color:var(--sectionOneBackgroundColor);
+  border-color:var(--sectionOneBackgroundColor);
+}
+@media all and (max-width:30em){
+ a.button2{
+  display:block;
+  margin:0.4em auto
+ }
+}
+
+
+
+
 .projects-page {
   color:white;
-  background-color: darkolivegreen;
+  background-color: var(--sectionThreeBackgroundColor);
   height: 100vh;
   display: flex;
   flex-direction: column;
