@@ -6,6 +6,7 @@ import React from 'react';
 // } from "react-router-dom";
 import './App.css';
 import {Link} from 'react-scroll'
+import {Container} from 'react-bootstrap'
 
 
 import AboutPage from './pages/AboutPage'
@@ -39,8 +40,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-
+        <Navbar/>
         <body className="App-body">
+
 
           <p style={{"font-size":75}}>Hey!</p>
           <p style={{"font-size":50}}>I'm George.</p>
@@ -49,11 +51,11 @@ class App extends React.Component {
 
           <EnterButton />
         </body>
+        <Container className='white-section' fluid>
+          <AboutPage />
+        </Container> 
 
 
-        <ColoredLine color={'white'} height={1} width={300}/>
-        <Navbar/>
-        <AboutPage />
         <ColoredLine color={'white'} height={1} width={300}/>
         <ResumePage />
         <ColoredLine color={'white'} height={1} width={300}/>
