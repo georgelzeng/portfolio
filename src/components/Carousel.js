@@ -3,6 +3,7 @@ import about_pic from '../assets/about_pic.JPG'
 import squaw from '../assets/squaw.JPG'
 import grad from '../assets/grad.jpg'
 import nyc from '../assets/nyc.JPG'
+import {Container, Image, Col} from 'react-bootstrap';
 
 
 const fadeImages = [
@@ -57,12 +58,12 @@ class Carousel extends Component {
   
     render() {
         return (
-            <div className='about-pic-col'>
-                <img className='about-picture' id={this.state.arr[0]} src={fadeImages[0]} />
-                <img className='about-picture' id={this.state.arr[1]} src={fadeImages[1]} />
-                <img className='about-picture' id={this.state.arr[2]} src={fadeImages[2]} />
-                <img className='about-picture' id={this.state.arr[3]} src={fadeImages[3]} />
-            </div>
+            <Col className='about-pic-col'>
+                <Image fluid className='about-picture' id={this.state.arr[0]} src={fadeImages[0]} />
+                <Image fluid className='about-picture' id={this.state.arr[1]} src={fadeImages[1]} />
+                <Image fluid className='about-picture' id={this.state.arr[2]} src={fadeImages[2]} />
+                <Image fluid className='about-picture' id={this.state.arr[3]} src={fadeImages[3]} />
+            </Col>
         )
 
     }

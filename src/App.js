@@ -5,6 +5,8 @@ import React from 'react';
 //   Route, 
 // } from "react-router-dom";
 import './App.css';
+import {Link} from 'react-scroll'
+
 
 import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
@@ -13,7 +15,7 @@ import HobbiesPage from './pages/HobbiesPage'
 // import Footer from './components/Footer';
 import ColoredLine from './components/Line';
 import EnterButton from './components/EnterButton'
-// import { Link, animateScroll as scroll } from "react-scroll";
+import Navbar from './components/Navbar'
 
 
 
@@ -37,21 +39,34 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+
         <body className="App-body">
+
           <p style={{"font-size":75}}>Hey!</p>
           <p style={{"font-size":50}}>I'm George.</p>
           <p align="center"> I'm a software engineer and a product manager passionate about building cool things. </p>
-          <ColoredLine color={'white'} height={1} width={200}/>
+          <ColoredLine color={'white'} height={1} width={200} style={{'margin':100}}/>
 
           <EnterButton />
         </body>
+
+
+        <ColoredLine color={'white'} height={1} width={300}/>
+        <Navbar/>
         <AboutPage />
+        <ColoredLine color={'white'} height={1} width={300}/>
         <ResumePage />
+        <ColoredLine color={'white'} height={1} width={300}/>
         <ProjectsPage />
+        <ColoredLine color={'white'} height={1} width={300}/>
         <HobbiesPage />
 
-
       </div>
+    );
+  }
+}
+
+export default App;
 
       // <Router>
       //   <Container className="p-0" fluid={true}>
@@ -74,9 +89,3 @@ class App extends React.Component {
       //     <Footer />
       //   </Container>
       // </Router>
-
-    );
-  }
-}
-
-export default App;
