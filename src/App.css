@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  position: relative;
 }
 
 .App-logo {
@@ -10,12 +11,42 @@
 
 :root {
   --sectionOneBackgroundColor: cornflowerblue;
-  --aboutTextColor: black;
   --aboutBackgroundColor: blanchedalmond;
   --sectionTwoBackgroundColor: white;
-  --resumeBackgroundColor: var(--sectionOneBackgroundColor);
-  --sectionThreeBackgroundColor: var(--aboutBackgroundColor)
+  --resumeBackgroundColor: white;
+  --sectionThreeBackgroundColor: cornflowerblue;
+  --projectBackgroundColor: cornflowerblue;
 
+  --homePageTextColor: white;
+  --aboutTextColor: black;
+  --resumeTextColor: black;
+  --projectTextColor: black;
+  }
+
+  /* TEXT */
+  #h1Text {
+    font-family: 'Roboto','Avenir', 'Helvetica';
+    font-size: 100px;
+  }
+
+  #h2Text{
+    font-family: 'Roboto','Avenir', 'Helvetica';
+    font-size: 50px
+  }
+
+  #h3Text{
+    font-family: 'Roboto','Avenir', 'Helvetica';
+    font-size: 25px
+  }
+
+  #h3SubtitleText{
+    font-family: 'Roboto','Avenir', 'Helvetica';
+    font-size: 18px
+  }
+
+  #pText{
+    font-family: 'Roboto','Avenir', 'Helvetica';
+    font-size: 15px
   }
 
   /* NAV BAR */
@@ -107,13 +138,53 @@
   transform: scale(0.1, 1);
 }
 
+/* SECTIONS */
+#two.section {
+  background-color: var(--sectionTwoBackgroundColor);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#three.section{
+  background-color: var(--sectionThreeBackgroundColor);
+  min-height: 270vh;
+  height: max-content;
+  position: relative;
+  justify-content:center;
+  display: flex
+}
+
+#four.section {
+  position:relative;
+  display:flex;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  #two.section {
+    min-height: 150vh
+  }
+  #three.section{
+    min-height: 450vh
+  }
+}
+
+
 /* TITLECARD */
 
 .titlecard{
   font-size: 30px;
   position: absolute;
-  top: -50px;
+  top: -70px;
   font-weight: bold;
+}
+
+#about{
+  background-color: var(--sectionTwoBackgroundColor);
 }
 
 /* HOME PAGE */
@@ -126,16 +197,26 @@
   align-items: center;
   font-size: 1.2em;
   color: white;
-  font-family: 'Avenir', 'Helvetica';
+}
 
+.homePage{
+  text-align: left
 }
 
 .hey {
   margin-top: 100px
 }
+.im-george {
+}
+
+.im-a{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 #enterbutton{
-  margin: 15px;
+  margin-top: 15px;
+  margin-left: 0px;
   cursor: pointer;
 }
 
@@ -143,22 +224,6 @@
   color:darkslategray
 }
 
-/* SECTIONS */
-#two.section {
-  color:black;
-  background-color: var(--sectionTwoBackgroundColor);
-  min-height: 150vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-#three.section{
-  background-color: var(--sectionThreeBackgroundColor);
-  min-height: 200vh
-}
 
 /* ABOUT PAGE */
 
@@ -166,10 +231,16 @@
   color:var(--aboutTextColor);
   background-color: var(--aboutBackgroundColor);
   position: absolute;
-  top: -100px;
-  max-width: 80vw;
-  min-height: 70vh;
+  top: -300px;
+  max-width: 70vw;
+  align-content: center;
+  flex-direction: column;
+  height: max-content;
   display: flex;
+  height: max-content;
+  padding: 40px 0px;
+  padding-bottom: 40px;
+  padding-top: 40px
 }
 
 .about-row {
@@ -178,19 +249,18 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  min-width: 100%;
+  margin-top: -10px;
+
 }
 
 .about-text-col {
   flex-direction: column;
   margin: auto;
   margin-right: 20px;
-  flex-basis: 40%;
 }
 
 .about-pic-col {
   margin: auto;
-  flex-basis: 40%;
   max-height: 100vh;
   
 }
@@ -271,15 +341,9 @@
 }
 
 .bullet{
-  font-weight: bold;
-  font-size: x-large;
   width: 10px
 }
 
-.bullet-text{
-  font-weight: bold;
-  font-size: x-large
-}
 
 .bullet-text-col{
   flex:5
@@ -312,23 +376,27 @@
 /* RESUME PAGE */
 
 
-.resume-title-card{
-  position: absolute;
-  top: -200px
-}
-
 .resume-page{
-  min-height: 100vh;
+  color: var(--resumeTextColor);
+  height: max-content;
   margin: 0;
-  background-color: var(--sectionTwoBackgroundColor);
+  background-color: var(--resumePageBackgroundColor);
   position:absolute;
-  bottom: -500px;
+  top: -300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media (max-width: 600px) {
+  .education-row{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
+  }
+}
 
 .education-row {
+  background-color: var(--resumeBackgroundColor);
   display: flex;
   align-items: center
 }
@@ -363,7 +431,8 @@
 
 .resume-row{
 display: flex;
-background-color: var(--sectionTwoBackgroundColor);
+height: max-content;
+background-color: var(--resumeBackgroundColor);
 justify-content: space-evenly;
 
 }
@@ -373,8 +442,13 @@ justify-content: space-evenly;
   width:200px;
   height:250px; 
 }
+
+.card-date{
+  margin-top: 5px
+}
 .resume-button-row{
   justify-content: center;
+  background-color: var(--resumeBackgroundColor);
   padding: 0 0 30px 0
 }
 
@@ -411,25 +485,66 @@ a.button2:active{
 
 
 
+/* Projects Page */
+
+.projects-container-page {
+  align-content: center;
+  width: 100vw
+}
 .projects-page {
-  color:white;
-  background-color: var(--sectionThreeBackgroundColor);
-  height: 100vh;
+  color:var(--projectTextColor);
+  background-color: var(--projectBackgroundColor);
+  height: max-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  position: absolute;
+  top: -1100px;
+  padding-bottom: 100px;
 }
 
-.hobbies-page {
-  color:white;
-  background-color: darkcyan;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+.project-title {
+  font-size: x-large;
+}
+
+.projects-page #h3Text{
+  color:white
+}
+.projects-page #h3SubtitleText{
+  color:white
+}
+
+.project-row{
+  display:flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 125px;
+  padding-right: 125px;
+  margin-top: 20px;
 }
 
 
+@media (max-width:1000px) {
+  .project-row{
+    align-items: center;
+    margin-top: 20px;
+    padding: 0px
+  }
+}
 
+.project-pic{
+  width: 25%;
+  padding-right: 20px;
+  border-right: solid 1px;
+  border-color: white;
+}
+
+.project-col{
+  padding-left: 30px;
+  text-align: left;
+  flex-basis: 60%
+}
+
+.footer {
+  position: absolute;
+  bottom: 30px
+}

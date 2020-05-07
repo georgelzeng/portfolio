@@ -22,7 +22,7 @@ class ResumePage extends Component {
         return (
 
                 <Container className='resume-page'>
-                    <Titlecard className='resume-title-card' title='Resume'/>
+                    <Titlecard title='Resume'/>
                     <Row>
                         <EducationCard />
                     </Row>

@@ -15,38 +15,38 @@ class AboutPage extends Component {
     render() {
         return (
                 <Container className = 'about-page'>
-                    <Titlecard title='ABOUT'/>
+                    <Titlecard color='white' title='About'/>
                     <Row className = 'about-row'> 
                         <Carousel/>
                         <Col className='about-text-col'>
                             <Row className='about-text-row'>
-                                <text className='bullet' > > </text>
+                                <text className='bullet' id='h3Text'> > </text>
                                 <Col className='bullet-text-col'>
-                                    <p className='bullet-text mb-2' align='left' > Open to opportunities</p>
+                                    <p className='bullet-text mb-2' id='h3Text' align='left' > Open to opportunities</p>
                                 </Col>
                             </Row>
                             <Row className='about-text-row'>
-                                <text className='bullet'> > </text>
+                                <text className='bullet' id='h3Text'> > </text>
                                 <Col className='bullet-text-col'>
-                                    <p className='bullet-text mb-2' align='left' >Ex-Product @ <mark id='Hive'>Hive</mark>, Ex-Software @ <mark id="Axon">Axon</mark></p>
+                                    <p className='bullet-text mb-2' id='h3Text' align='left' >Ex-Product @ <mark id='Hive'>Hive</mark>, Ex-Software @ <mark id="Axon">Axon</mark></p>
                                 </Col>
                             </Row>
                             <Row className='about-text-row'>
-                                <text className='bullet'> > </text>
+                                <text className='bullet' id='h3Text'> > </text>
                                 <Col className='bullet-text-col'>
-                                    <p className='bullet-text mb-2' align='left' >Former President @ <a href='https://phoenix.berkeley.edu' target="_blank"><mark id='Phoenix'>Phoenix Consulting Group</mark></a></p>
+                                    <p className='bullet-text mb-2' id='h3Text' align='left' >Former President @ <a href='https://phoenix.berkeley.edu' target="_blank"><mark id='Phoenix'>Phoenix Consulting Group</mark></a></p>
                                 </Col>
                             </Row>
                             <Row className='about-text-row'>
-                                <text className='bullet' > > </text>
+                                <text className='bullet' id='h3Text'> > </text>
                                 <Col className='bullet-text-col'>
-                                    <p className='bullet-text mb-2' align='left' >Computer Science Alum @ UC Berkeley  <i class="em em-bear" aria-role="presentation" aria-label="NEGATIVE SQUARED AB"></i></p>
+                                    <p className='bullet-text mb-2' id='h3Text' align='left' >Computer Science Alum @ UC Berkeley  <i class="em em-bear" aria-role="presentation" aria-label="NEGATIVE SQUARED AB"></i></p>
                                 </Col>
                             </Row>
                             <Row className='about-text-row'>
                                 <text className='bullet' > </text>
                                 <Col className='bullet-text-col'>
-                                    <p style={{'font-size': 20}} align='left' >   Welcome to my personal website. My name is George, and I am a PM and an engineer.</p>
+                                    <p  align='left' id='h3SubtitleText' >   Welcome to my personal website. My name is George, and I am a PM and an engineer.</p>
                                 </Col>
                             </Row>
                             <Row className='icon-row'>

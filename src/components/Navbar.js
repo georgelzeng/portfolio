@@ -23,11 +23,11 @@ class Navbar extends Component {
                 <div className='nav-text-container'>
                     <Link className='nav-item'
                     activeClass='active'
-                    to='about-page'
+                    to='about-row'
                     spy={true}
                     smooth={true}
                     isDynamic={true}
-                    offset={0}
+                    offset={-180}
                     duration={500}>
                         <span>ABOUT</span>
                     </Link> 
@@ -37,7 +37,7 @@ class Navbar extends Component {
                     spy={true}
                     smooth={true}
                     isDynamic={true}
-                    offset={0}
+                    offset={-150}
                     duration={500}>
                         <span>RESUME</span>
                     </Link> 
@@ -47,7 +47,7 @@ class Navbar extends Component {
                     spy={true}
                     smooth={true}
                     isDynamic={true}
-                    offset={0}
+                    offset={-150}
                     duration={500}
                     style={{'margin':0}}>
                         <span>PROJECTS</span> 

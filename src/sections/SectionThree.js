@@ -1,11 +1,11 @@
 import React from 'react'
 
-import ProjectsPage from '../pages/ProjectsPage'
+import ResumePage from '../pages/ResumePage'
 
 function SectionThree() {
     return(
         <div className='section' id='three'>
-            <ProjectsPage />
+            <ResumePage />
         </div>
     )
 }

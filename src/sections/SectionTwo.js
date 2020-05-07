@@ -7,10 +7,7 @@ function SectionTwo() {
     return(
         <div className='section' id='two'>
             <AboutPage />
-            <ResumePage />
         </div>
-
-
     )
 }
 

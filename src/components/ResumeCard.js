@@ -12,9 +12,9 @@ class ResumeCard extends Component {
                     <Card.Img className='resume-card-img' variant="top" src={this.props.img} />
                     <Card.Body>
                         <Card.Title>{this.props.company}</Card.Title>
-                        <Card.Subtitle>{this.props.position}</Card.Subtitle>
-                        <Card.Text>{this.props.date}</Card.Text>
-                        <Card.Text>
+                        <Card.Subtitle id='h3SubtitleText'>{this.props.position}</Card.Subtitle>
+                        <Card.Text className='card-date' id='h3SubtitleText'>{this.props.date}</Card.Text>
+                        <Card.Text id='pText'>
                             {this.props.text}
                         </Card.Text>
                     </Card.Body>

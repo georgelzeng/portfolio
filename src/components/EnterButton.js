@@ -5,7 +5,7 @@ class EnterButton extends Component {
     render() {
         return (
             <div id='enterbutton'>
-                <Link
+                <Link id='h3SubtitleText'
                     activeClass='active'
                     to='about-page'
                     spy={true}
@@ -13,7 +13,7 @@ class EnterButton extends Component {
                     isDynamic={true}
                     offset={0}
                     duration={500}>
-                        enter
+                        Press to Enter
                 </Link>
             </div>
         )
