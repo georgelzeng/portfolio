@@ -3,7 +3,7 @@ import about_pic from '../assets/about_pic.JPG'
 import squaw from '../assets/squaw.JPG'
 import grad from '../assets/grad.jpg'
 import nyc from '../assets/nyc.JPG'
-import {Container, Image, Col} from 'react-bootstrap';
+import {Image, Col} from 'react-bootstrap';
 
 
 const fadeImages = [

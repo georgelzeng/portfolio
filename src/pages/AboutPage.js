@@ -15,7 +15,7 @@ class AboutPage extends Component {
     render() {
         return (
                 <Container className = 'about-page'>
-                    <Titlecard color='white' title='About'/>
+                    <Titlecard color='cornflowerblue' title='About'/>
                     <Row className = 'about-row'> 
                         <Carousel/>
                         <Col className='about-text-col'>
@@ -35,12 +35,6 @@ class AboutPage extends Component {
                                 <text className='bullet' id='h3Text'> > </text>
                                 <Col className='bullet-text-col'>
                                     <p className='bullet-text mb-2' id='h3Text' align='left' >Former President @ <a href='https://phoenix.berkeley.edu' target="_blank"><mark id='Phoenix'>Phoenix Consulting Group</mark></a></p>
-                                </Col>
-                            </Row>
-                            <Row className='about-text-row'>
-                                <text className='bullet' id='h3Text'> > </text>
-                                <Col className='bullet-text-col'>
-                                    <p className='bullet-text mb-2' id='h3Text' align='left' >Computer Science Alum @ UC Berkeley  <i class="em em-bear" aria-role="presentation" aria-label="NEGATIVE SQUARED AB"></i></p>
                                 </Col>
                             </Row>
                             <Row className='about-text-row'>

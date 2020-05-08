@@ -7,10 +7,9 @@ class ResumeCard extends Component {
     }
     render() {
         return(
-            <div>
                 <Card className='resume-card' style={{ width: '18rem', border:0}}>
                     <Card.Img className='resume-card-img' variant="top" src={this.props.img} />
-                    <Card.Body>
+                    <Card.Body className='resume-card-body'>
                         <Card.Title>{this.props.company}</Card.Title>
                         <Card.Subtitle id='h3SubtitleText'>{this.props.position}</Card.Subtitle>
                         <Card.Text className='card-date' id='h3SubtitleText'>{this.props.date}</Card.Text>
@@ -19,8 +18,6 @@ class ResumeCard extends Component {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-
-            </div>
         )
     }
 }

@@ -11,11 +11,11 @@
 
 :root {
   --sectionOneBackgroundColor: cornflowerblue;
-  --aboutBackgroundColor: blanchedalmond;
+  --aboutBackgroundColor: white;
   --sectionTwoBackgroundColor: white;
-  --resumeBackgroundColor: white;
-  --sectionThreeBackgroundColor: cornflowerblue;
-  --projectBackgroundColor: cornflowerblue;
+  --resumeBackgroundColor: blanchedalmond;
+  --sectionThreeBackgroundColor: blanchedalmond;
+  --projectBackgroundColor: white;
 
   --homePageTextColor: white;
   --aboutTextColor: black;
@@ -101,7 +101,7 @@
 }
 
 .nav-item {
-  color: bla;
+  color: black;
   transition: all 0.3s;
   position: relative;
 }
@@ -120,14 +120,15 @@
   transition: all 0.3s;
   border-top-width: 0px;
   border-bottom-width: 1px;
-  border-top-style: solid;
+  /* border-top-style: solid; */
   border-bottom-style: solid;
-  border-top-color: rgba(255,255,255,0.5);
-  border-bottom-color: rgb(0, 0, 0);
+  /* border-top-color: rgba(255,255,255,0.5); */
+  border-bottom-color: white;
   transform: scale(0.1, 1);
 }
 .nav-item:hover span {
   letter-spacing: 2px;
+  font-size: large
 }
 .nav-item:hover::before {
   opacity: 1; 
@@ -141,7 +142,7 @@
 /* SECTIONS */
 #two.section {
   background-color: var(--sectionTwoBackgroundColor);
-  min-height: 100vh;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,10 +152,11 @@
 
 #three.section{
   background-color: var(--sectionThreeBackgroundColor);
-  min-height: 270vh;
+  padding-bottom: 50px;
   height: max-content;
   position: relative;
   justify-content:center;
+  align-items: center;
   display: flex
 }
 
@@ -165,12 +167,9 @@
 }
 
 @media (max-width: 700px) {
-  #two.section {
+  /* #two.section {
     min-height: 150vh
-  }
-  #three.section{
-    min-height: 450vh
-  }
+  } */
 }
 
 
@@ -178,9 +177,8 @@
 
 .titlecard{
   font-size: 30px;
-  position: absolute;
-  top: -70px;
-  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px
 }
 
 #about{
@@ -191,11 +189,10 @@
 
 .App-body {
   background-color: var(--sectionOneBackgroundColor);
-  min-height: 130vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1.2em;
   color: white;
 }
 
@@ -230,17 +227,11 @@
 .about-page {
   color:var(--aboutTextColor);
   background-color: var(--aboutBackgroundColor);
-  position: absolute;
-  top: -300px;
-  max-width: 70vw;
   align-content: center;
   flex-direction: column;
   height: max-content;
   display: flex;
   height: max-content;
-  padding: 40px 0px;
-  padding-bottom: 40px;
-  padding-top: 40px
 }
 
 .about-row {
@@ -249,7 +240,6 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: -10px;
 
 }
 
@@ -261,7 +251,7 @@
 
 .about-pic-col {
   margin: auto;
-  max-height: 100vh;
+  min-height: 60vh;
   
 }
 
@@ -381,12 +371,12 @@
   height: max-content;
   margin: 0;
   background-color: var(--resumePageBackgroundColor);
-  position:absolute;
-  top: -300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
+
 @media (max-width: 600px) {
   .education-row{
     display: flex;
@@ -398,19 +388,28 @@
 .education-row {
   background-color: var(--resumeBackgroundColor);
   display: flex;
-  align-items: center
+  align-items: center;
+  max-width: 75vw;
+  margin-bottom: 70px
 }
+
 .education-card-img {
   max-width: 250px
 }
 
 .education-col {
   text-align: left;
-  margin-left: 30px
+  margin-left: 30px;
+  padding-left: 30px;
+  border-left: solid 1px ;
+  border-color: dimgray
 }
 
 .education-name {
-  font-size: 30px
+  font-size: 30px;
+  border-bottom: solid 1px;
+  border-color: dimgray
+
 }
 .education-bullet{
 
@@ -431,39 +430,51 @@
 
 .resume-row{
 display: flex;
-height: max-content;
+width: 100%;
 background-color: var(--resumeBackgroundColor);
 justify-content: space-evenly;
+border-top: solid 1px;
+border-color: dimgray
 
+}
+
+.resume-card{
+  background-color: var(--resumeBackgroundColor);
 }
 
 .resume-card-img{
   object-fit: cover;
   width:200px;
   height:250px; 
+  background-color: var(--resumeBackgroundColor);
+}
+
+.resume-card-body{
+  background-color: var(--resumeBackgroundColor);
 }
 
 .card-date{
-  margin-top: 5px
+  margin-top: 5px;
 }
 .resume-button-row{
   justify-content: center;
+  width: 100%;
   background-color: var(--resumeBackgroundColor);
-  padding: 0 0 30px 0
+  padding: 0 0 30px 0;
 }
 
 
 a.button2{
   display:inline-block;
   padding:0.5em 3em;
-  border:0.16em solid dimgray;
+  border:0.16em solid black;
   margin:0 30px 0.3em 30px;
   box-sizing: border-box;
   text-decoration:none;
   text-transform:uppercase;
   font-family:'Roboto',sans-serif;
   font-weight:400;
-  color: dimgray;
+  color: black;
   text-align:center;
   transition: all 0.15s;
 }
@@ -483,8 +494,6 @@ a.button2:active{
 }
 
 
-
-
 /* Projects Page */
 
 .projects-container-page {
@@ -498,21 +507,17 @@ a.button2:active{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
-  top: -1100px;
   padding-bottom: 100px;
 }
 
 .project-title {
   font-size: x-large;
+  border-bottom: solid 1px;
+  width: 100%;
+  text-align: left;
 }
 
-.projects-page #h3Text{
-  color:white
-}
-.projects-page #h3SubtitleText{
-  color:white
-}
+
 
 .project-row{
   display:flex;
@@ -532,10 +537,13 @@ a.button2:active{
 }
 
 .project-pic{
-  width: 25%;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
   padding-right: 20px;
   border-right: solid 1px;
-  border-color: white;
+  border-color: dimgray;
 }
 
 .project-col{
@@ -545,6 +553,7 @@ a.button2:active{
 }
 
 .footer {
-  position: absolute;
-  bottom: 30px
+  color: cornflowerblue;
+  margin-bottom: 30px
 }
+

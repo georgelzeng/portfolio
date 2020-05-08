@@ -3,11 +3,14 @@ import {Container, Row, Col} from 'react-bootstrap';
 
 
 import phoenix from '../assets/phoenix.png';
-import axon from '../assets/axon.jpeg';
+import axon from '../assets/axon.png';
 import hive from '../assets/hive.png';
 import ResumeCard from '../components/ResumeCard'
 import EducationCard from '../components/EducationCard'
 import Titlecard from '../components/Titlecard'
+
+import sresume from '../assets/gz_swe_resume.pdf';
+import presume from '../assets/gz_pm_resume.pdf';
 
 const resumeCardsInfo= {
     'hive': {'img': hive, 'company': 'Hive', 'position': 'Associate Product Manager', 'date': 'Jul 2019-Apr 2020', 'text': 'Facilitated development of content moderation CV models'},
@@ -22,10 +25,8 @@ class ResumePage extends Component {
         return (
 
                 <Container className='resume-page'>
-                    <Titlecard title='Resume'/>
-                    <Row>
-                        <EducationCard />
-                    </Row>
+                    <Titlecard color='cornflowerblue' title='Resume'/>
+                    <EducationCard />
                     <Row className='resume-row'>
                         <ResumeCard 
                             img={resumeCardsInfo.hive.img} 
@@ -47,8 +48,8 @@ class ResumePage extends Component {
                             text={resumeCardsInfo.phoenix.text}/> 
                     </Row>
                     <Row className='resume-button-row'>
-                        <a href="something" class="button2">SWE Resume</a>
-                        <a href="something" class="button2">PM Resume</a>
+                        <a href={sresume} class='button2' download>SWE Resume</a>
+                        <a href={presume} class='button2' download>PM Resume</a>
                     </Row>
                 </Container>
 
