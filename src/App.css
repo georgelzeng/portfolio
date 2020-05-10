@@ -72,6 +72,12 @@
   align-items: center;
 }
 
+@media (max-width: 300px) {
+  #nav-logo {
+      display: none;
+  }
+}
+
 .nav-logo:hover {
   cursor: pointer;
 }
@@ -241,6 +247,8 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px
 
 }
 
@@ -251,9 +259,7 @@
 }
 
 .about-pic-col {
-  margin: auto;
-  min-height: 60vh;
-  
+  margin: auto;  
 }
 
 .carousel-container{
