@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Image, Row, Col, Card, ListGroup, ListGroupItem} from 'react-bootstrap';
+import {Image, Row, Col} from 'react-bootstrap';
 
 import ucb from '../assets/ucb.png'
 

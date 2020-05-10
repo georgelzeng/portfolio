@@ -439,11 +439,13 @@ border-color: dimgray
 
 .resume-card{
   background-color: var(--resumeBackgroundColor);
+  display: flex;
+  justify-content: center;
 }
 
 .resume-card-img{
   object-fit: cover;
-  width:200px;
+  width:300px;
   height:250px; 
   background-color: var(--resumeBackgroundColor);
 }

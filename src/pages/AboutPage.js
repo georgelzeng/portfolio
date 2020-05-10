@@ -31,7 +31,7 @@ class AboutPage extends Component {
                             </Row>
                             <Row className='about-text-row'>
                                 <Col className='bullet-text-col'>
-                                    <p className='bullet-text mb-2' id='h3Text' align='left' >Former President @ <a href='https://phoenix.berkeley.edu' target="_blank"><mark id='Phoenix'>Phoenix Consulting Group</mark></a></p>
+                                    <p className='bullet-text mb-2' id='h3Text' align='left' >Former President @ <a href='https://phoenix.berkeley.edu' target="_blank"><mark id='Phoenix'>Phoenix Consulting</mark></a></p>
                                 </Col>
                             </Row>
                             <Row className='about-text-row'>
