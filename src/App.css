@@ -215,10 +215,11 @@
   margin-top: 15px;
   margin-left: 0px;
   cursor: pointer;
+  width: 120px
 }
 
 #enterbutton:hover{
-  color:darkslategray
+  color:dimgray
 }
 
 
@@ -324,10 +325,9 @@
 .about-text-row {
   display:flex;
 }
-.bullet-col{
-  width: 10px;
-  text-align: left;
-  margin: 0;
+
+.about-short-text{
+  color: dimgray;
 }
 
 .bullet{
@@ -341,7 +341,7 @@
 
 .icon-row{
   display:flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .icon {
@@ -411,9 +411,7 @@
   border-color: dimgray
 
 }
-.education-bullet{
 
-}
 
 .education-year {
   text-align: left;
@@ -424,6 +422,7 @@
 }
 
 .education-classes {
+  color: dimgray;
   text-align: left;
 }
 
@@ -452,9 +451,16 @@ border-color: dimgray
 .resume-card-body{
   background-color: var(--resumeBackgroundColor);
 }
+.card-position{
+}
 
 .card-date{
+
   margin-top: 5px;
+}
+
+.card-description{
+  color: dimgray;
 }
 .resume-button-row{
   justify-content: center;
@@ -467,14 +473,14 @@ border-color: dimgray
 a.button2{
   display:inline-block;
   padding:0.5em 3em;
-  border:0.16em solid black;
+  border:2px solid dimgray;
   margin:0 30px 0.3em 30px;
   box-sizing: border-box;
   text-decoration:none;
   text-transform:uppercase;
   font-family:'Roboto',sans-serif;
   font-weight:400;
-  color: black;
+  color: dimgray;
   text-align:center;
   transition: all 0.15s;
 }

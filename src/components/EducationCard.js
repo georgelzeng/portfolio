@@ -11,7 +11,7 @@ class EducationCard extends Component {
                 <Col className='education-col'> 
                     <p className='education-name' id='h3Text'>University of California Berkeley</p>
                     <Col>
-                        <p className='education-year' id='h3SubtitleText'>Class of 2019, B.A. Computer Science</p>
+                        <p className='education-year' id='h3SubtitleText'>Class of 2019, B.A. Computer Science <i class="em em-robot_face" aria-role="presentation" aria-label="BIRD"></i></p>
                     </Col>
                     <Col>
                         <p className='education-gpa' id='h3SubtitleText'>GPA: 3.6</p>

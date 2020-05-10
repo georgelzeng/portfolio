@@ -11,7 +11,7 @@ class EnterButton extends Component {
                     spy={true}
                     smooth={true}
                     isDynamic={true}
-                    offset={0}
+                    offset={-20}
                     duration={500}>
                         Press to Enter
                 </Link>
