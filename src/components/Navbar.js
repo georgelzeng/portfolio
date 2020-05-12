@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import Scroll, {Link} from 'react-scroll'
+import {Navbar} from 'react-bootstrap'
 
-class Navbar extends Component {
+class ScrollNavbar extends Component {
 
     render() {
     return (
-        <nav className='nav'>
+        <Navbar className='nav'>
             <div className='nav-content'>
                 <div className='nav-logo'>
                     <Link className='nav-item'
@@ -19,7 +20,10 @@ class Navbar extends Component {
                         <span>GEORGE ZENG</span>
                     </Link> 
                 </div>
-                <div className='nav-text-container'>
+            <div className='nav-text-container'>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+
                     <Link className='nav-item'
                     activeClass='active'
                     to='about-page'
@@ -50,11 +54,62 @@ class Navbar extends Component {
                     duration={500}
                     style={{'margin':0}}>
                         <span>PROJECTS</span> 
-                    </Link>                    
-                </div>
+                    </Link> 
+            </Navbar.Collapse>
+            </div> 
             </div>
-        </nav>
+            </Navbar>
+        
+        // <nav className='nav'>
+        //     <div className='nav-content'>
+        //         <div className='nav-logo'>
+        //             <Link className='nav-item'
+        //                 activeClass='active'
+        //                 to='App'
+        //                 spy={true}
+        //                 smooth={true}
+        //                 isDynamic={true}
+        //                 offset={0}
+        //                 duration={500}>
+        //                 <span>GEORGE ZENG</span>
+        //             </Link> 
+        //         </div>
+        //         <div className='nav-text-container'>
+        //             <Link className='nav-item'
+        //             activeClass='active'
+        //             to='about-page'
+        //             spy={true}
+        //             smooth={true}
+        //             isDynamic={true}
+        //             offset={-20}
+        //             duration={500}>
+        //                 <span>ABOUT</span>
+        //             </Link> 
+        //             <Link className='nav-item'
+        //             activeClass='active'
+        //             to='resume-page'
+        //             spy={true}
+        //             smooth={true}
+        //             isDynamic={true}
+        //             offset={-30}
+        //             duration={500}>
+        //                 <span>RESUME</span>
+        //             </Link> 
+        //             <Link className='nav-item'
+        //             activeClass='active'
+        //             to='projects-page'
+        //             spy={true}
+        //             smooth={true}
+        //             isDynamic={true}
+        //             offset={-20}
+        //             duration={500}
+        //             style={{'margin':0}}>
+        //                 <span>PROJECTS</span> 
+        //             </Link>                    
+        //         </div>
+        //     </div>
+        // </nav>
         )
     }
 }
-export default Navbar;
+export default ScrollNavbar;

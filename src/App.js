@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import Navbar from './components/Navbar'
+import ScrollNavbar from './components/Navbar'
 import SectionOne from './sections/SectionOne'
 import SectionTwo from './sections/SectionTwo'
 import SectionThree from './sections/SectionThree'
@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navbar/>
+        <ScrollNavbar/>
         <SectionOne />
         <SectionTwo />
         <SectionThree />
