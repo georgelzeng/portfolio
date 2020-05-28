@@ -542,6 +542,7 @@ a.button2:active{
   padding-left: 125px;
   padding-right: 125px;
   margin-top: 20px;
+  text-align: left;
 }
 
 
@@ -574,3 +575,15 @@ a.button2:active{
   margin-bottom: 30px
 }
 
+.project-pic-row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.project-pic-2{
+  max-height: 60vh;
+  margin: 15px
+
+}

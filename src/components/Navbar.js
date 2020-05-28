@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Scroll, {Link} from 'react-scroll'
+import {Link} from 'react-scroll'
 import {Navbar} from 'react-bootstrap'
 
 class ScrollNavbar extends Component {

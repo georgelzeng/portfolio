@@ -1,7 +1,5 @@
 import React from 'react';
 
-import ColoredLine from '../components/Line';
-import EnterButton from '../components/EnterButton'
 import HomePage from '../pages/HomePage'
 
 function SectionOne() {
