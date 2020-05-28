@@ -48,8 +48,8 @@ class ResumePage extends Component {
                             text={resumeCardsInfo.phoenix.text}/> 
                     </Row>
                     <Row className='resume-button-row'>
-                        <a href={sresume} class='button2' download>SWE Resume</a>
-                        <a href={presume} class='button2' download>PM Resume</a>
+                        <a href={sresume} class='button2'  target='_blank'>SWE Resume</a>
+                        <a href={presume} class='button2'  target='_blank'>PM Resume</a>
                     </Row>
                 </Container>
 
